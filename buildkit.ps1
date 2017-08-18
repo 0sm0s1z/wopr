@@ -9,9 +9,14 @@ echo "" > $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 #Config
 #Disable Windows Defender
 
+#!!#Verify iwr working // else invoke iexplorer and continue
+$ie = New-Object -ComObject InternetExplorer.Application
+$ie.Navigate("http://www.bing.com")
 
 #Package Manager
 iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+
+
 echo "Set-Alias pkg choco" >> $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 echo 'Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1" -Force' >>  $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 Set-Alias pkg Install-ChocolateyPackage
@@ -30,17 +35,18 @@ choco install git -y
 pkg install clink -y
 pkg install virtualbox -y
 pkg install VirtualBox.ExtensionPack -y
-pkg install win32-openssh -y
+pkg install openssh -y
 pkg install wireshark -y
 
 
 
 #Infosec Tools
 cd C:\Tools
-pkg install nmap -y
+
+# pkg install nmap -y #Causes system crash???
+
 pkg install zap -y
-$ie = New-Object -ComObject InternetExplorer.Application
-$ie.Navigate("http://www.bing.com")
+
 wget http://www.oxid.it/downloads/ca_setup.exe
 wget https://nmap.org/ncrack/dist/ncrack-0.5-setup.exe
 #https://github.com/CISOfy/lynis
@@ -110,6 +116,7 @@ cinst NETFramework4 -y
 #Wordlists
 git clone git.kali.org/packages/wordlists.git
 
+#Invoke-NukeItFromOrbit
 
 #Pkg mgr cheatsheet
 #Tool List
