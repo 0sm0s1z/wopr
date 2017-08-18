@@ -38,15 +38,12 @@ pkg install VirtualBox.ExtensionPack -y
 pkg install openssh -y
 pkg install wireshark -y
 
-
-
-#Infosec Tools
+###############
+#Infosec Tools#
+###############
 cd C:\Tools
-
 # pkg install nmap -y #Causes system crash???
-
 pkg install zap -y
-
 wget http://www.oxid.it/downloads/ca_setup.exe
 wget https://nmap.org/ncrack/dist/ncrack-0.5-setup.exe
 #https://github.com/CISOfy/lynis
@@ -59,51 +56,47 @@ wget http://www.fastandeasyhacking.com/download/armitage150813.zip
 wget https://windows.metasploit.com/metasploitframework-latest.msi
 
  #Git Tools
- cd C:\Tools
- git clone https://github.com/Acheron-VAF/Acheron.git
- git clone https://github.com/Subterfuge-Framework/Subterfuge.git 
- #Unsupported on Win (try ubuntu subsys)
- git clone https://github.com/upgoingstar/datasploit.git
- git clone https://github.com/EmpireProject/Empire.git
- git clone https://github.com/EmpireProject/EmPyre.git
- git clone https://github.com/beefproject/beef.git 
- #Unsupported on Win (try ubuntu subsys)
- git clone https://github.com/sullo/nikto.git #Extra Conf
- git clone https://github.com/wpscanteam/wpscan.git 
- #Unsupported on Win (try ubuntu subsys)
- git clone https://github.com/vanhauser-thc/thc-hydra.git 
- #Cygwin support
- git clone https://github.com/infobyte/evilgrade.git 
- #strawberry perl
- git clone https://github.com/SpiderLabs/Responder.git
- git clone https://github.com/BloodHoundAD/BloodHound.git
- iwr https://github.com/BloodHoundAD/BloodHound/releases/download/1.2.1/BloodHound-win32-x64.zip
- git clone https://bitbucket.org/LaNMaSteR53/recon-ng.git
- git clone https://github.com/rbsec/sslscan.git
- git clone https://github.com/0sm0s1z/Threat-Emulation-Toolkit.git
- git clone https://github.com/trustedsec/social-engineer-toolkit.git 
- #Unsupported on Win (try ubuntu subsys)
- git clone https://github.com/google/rekall.git
- git clone git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
- git clone git clone https://github.com/offensive-security/exploit-database.git /opt/exploit-database 
- #Unsupported on Win (try ubuntu subsys)
- git clone https://github.com/epinna/weevely3.git
+ #!!#Verify git working // else check/fix path and continue
+cd C:\Tools
+git clone https://github.com/Acheron-VAF/Acheron.git
+git clone https://github.com/Subterfuge-Framework/Subterfuge.git 
+git clone https://github.com/upgoingstar/datasploit.git
+git clone https://github.com/EmpireProject/Empire.git
+git clone https://github.com/EmpireProject/EmPyre.git
+git clone https://github.com/beefproject/beef.git 
+git clone https://github.com/sullo/nikto.git #Extra Conf
+git clone https://github.com/wpscanteam/wpscan.git 
+git clone https://github.com/vanhauser-thc/thc-hydra.git 
+#Cygwin support
+git clone https://github.com/infobyte/evilgrade.git 
+#strawberry perl
+git clone https://github.com/SpiderLabs/Responder.git
+git clone https://github.com/BloodHoundAD/BloodHound.git
+iwr https://github.com/BloodHoundAD/BloodHound/releases/download/1.2.1/BloodHound-win32-x64.zip
+git clone https://bitbucket.org/LaNMaSteR53/recon-ng.git
+git clone https://github.com/rbsec/sslscan.git
+git clone https://github.com/0sm0s1z/Threat-Emulation-Toolkit.git
+git clone https://github.com/trustedsec/social-engineer-toolkit.git 
+git clone https://github.com/google/rekall.git
+git clone git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+git clone git clone https://github.com/offensive-security/exploit-database.git /opt/exploit-database 
+git clone https://github.com/epinna/weevely3.git
 
 
- #Scripts
- mkdir C:\Tools\Scripts
- cd C:\Tools\Scripts
- git clone https://github.com/PowerShellMafia/PowerSploit.git
- git clone https://github.com/samratashok/nishang.git
- git clone https://github.com/davehull/Kansa.git
- git clone https://github.com/mattifestation/PowerShellArsenal.git
- git clone https://github.com/davehull/Kansa.git
- git clone https://github.com/darkoperator/Posh-VirusTotal.git
- git clone https://github.com/0sm0s1z/Invoke-SelfSignedWebRequest.git
+#Scripts
+mkdir C:\Tools\Scripts
+cd C:\Tools\Scripts
+git clone https://github.com/PowerShellMafia/PowerSploit.git
+git clone https://github.com/samratashok/nishang.git
+git clone https://github.com/davehull/Kansa.git
+git clone https://github.com/mattifestation/PowerShellArsenal.git
+git clone https://github.com/davehull/Kansa.git
+git clone https://github.com/darkoperator/Posh-VirusTotal.git
+git clone https://github.com/0sm0s1z/Invoke-SelfSignedWebRequest.git
 
 
 
-
+#Add if desired // specification cmd switch
 #DevPackages
 cinst nodejs.install -y
 choco install npm -y
@@ -117,6 +110,9 @@ cinst NETFramework4 -y
 git clone git.kali.org/packages/wordlists.git
 
 #Invoke-NukeItFromOrbit
+
+
+ #Unsupported on Win (try ubuntu subsys)
 
 #Pkg mgr cheatsheet
 #Tool List
