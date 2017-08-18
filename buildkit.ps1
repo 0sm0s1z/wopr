@@ -1,5 +1,6 @@
 Set-ExecutionPolicy -F RemoteSigned
 mkdir $HOME\Documents\WindowsPowerShell\
+mkdir C:\Tools
 echo "" > $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 
 #Environment
@@ -44,16 +45,15 @@ pkg install wireshark -y
 cd C:\Tools
 # pkg install nmap -y #Causes system crash???
 pkg install zap -y
-wget http://www.oxid.it/downloads/ca_setup.exe
-wget https://nmap.org/ncrack/dist/ncrack-0.5-setup.exe
-#https://github.com/CISOfy/lynis
-wget https://download.sysinternals.com/files/SysinternalsSuite.zip
-wget http://www.ollydbg.de/odbg201.zip
-wget http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_win64_standalone.zip
-wget http://www.openwall.com/john/h/john179w2.zip
-wget https://hashcat.net/files/hashcat-3.30.7z
-wget http://www.fastandeasyhacking.com/download/armitage150813.zip
-wget https://windows.metasploit.com/metasploitframework-latest.msi
+wget http://www.oxid.it/downloads/ca_setup.exe -o ca_setup.exe
+wget https://nmap.org/ncrack/dist/ncrack-0.5-setup.exe -o ncrack-0.5-setup.exe
+wget https://download.sysinternals.com/files/SysinternalsSuite.zip -o SysinternalsSuite.zip
+wget http://www.ollydbg.de/odbg201.zip -o odbg201.zip
+wget http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_win64_standalone.zip -o volatility_2.6_win64_standalone.zip
+wget http://www.openwall.com/john/h/john179w2.zip -o john179w2.zip
+wget https://hashcat.net/files/hashcat-3.30.7z -o hashcat-3.30.7z
+wget http://www.fastandeasyhacking.com/download/armitage150813.zip -o armitage150813.zip
+#wget https://windows.metasploit.com/metasploitframework-latest.msi -o metasploitframework-latest.msi #large package//make optional 
 
  #Git Tools
  #!!#Verify git working // else check/fix path and continue
@@ -72,7 +72,7 @@ git clone https://github.com/infobyte/evilgrade.git
 #strawberry perl
 git clone https://github.com/SpiderLabs/Responder.git
 git clone https://github.com/BloodHoundAD/BloodHound.git
-iwr https://github.com/BloodHoundAD/BloodHound/releases/download/1.2.1/BloodHound-win32-x64.zip
+wget https://github.com/BloodHoundAD/BloodHound/releases/download/1.2.1/BloodHound-win32-x64.zip -o BloodHound-win32-x64.zip
 git clone https://bitbucket.org/LaNMaSteR53/recon-ng.git
 git clone https://github.com/rbsec/sslscan.git
 git clone https://github.com/0sm0s1z/Threat-Emulation-Toolkit.git
