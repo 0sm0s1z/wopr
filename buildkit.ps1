@@ -13,7 +13,7 @@ echo "" > $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 #Package Manager
 iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
 echo "Set-Alias pkg choco" >> $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-echo 'Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1" -Force' >> C:\Users\0sm0s1z\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+echo 'Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1" -Force' >>  $HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 Set-Alias pkg Install-ChocolateyPackage
 set-alias pkg choco
 
